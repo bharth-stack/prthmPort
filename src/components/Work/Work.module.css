@@ -1,0 +1,224 @@
+@import "../AllCss/root.css";
+.WorkContainer {
+  height: 95vh;
+  background-color: var(--light);
+  display: grid;
+  grid-template-columns: 16rem;
+  grid-template-rows: 8rem;
+  row-gap: 0px;
+  column-gap: 0px;
+  border-radius: 0rem 0 3rem 3rem;
+  box-shadow: 1rem 1rem 1rem var(--shadow);
+  z-index: 1;
+  padding: 7rem 0rem 10rem 0rem;
+  overflow: hidden;
+}
+
+.container_1 {
+  width: 100rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  /* gap: 7rem; */
+}
+.conta {
+  width: 0;
+}
+.container_1 .card {
+  position: relative;
+  cursor: pointer;
+}
+
+.container_1 .card .face {
+  width: 30rem;
+  height: 20rem;
+  transition: 0.5s;
+}
+
+.container_1 .card .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(10rem);
+}
+
+.container_1 .card:hover .face.face1 {
+  background: var(--ternary);
+  transform: translateY(0);
+}
+
+.container_1 .card .face.face1 .Workcontent {
+  transition: 0.5s;
+}
+
+.container_1 .card:hover .face.face1 .Workcontent {
+  opacity: 1;
+}
+
+.container_1 .card .face.face1 .Workcontent img {
+  max-width: 30rem;
+  height: 20rem;
+}
+
+.container_1 .card .face.face1 .Workcontent h3 {
+  margin: 1rem 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.container_1 .card .face.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  transform: translateY(-10rem);
+}
+
+.container_1 .card:hover .face.face2 {
+  transform: translateY(0rem);
+}
+
+.container_1 .card .face.face2 .Workcontent p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+.container_1 .card .face.face2 .Workcontent h4 {
+  margin: 0 0 0.7rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.container_1 .card .face.face2 .Workcontent h4 span {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+.container_1 .card .face.face2 .Workcontent h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+  border-bottom: 0.1rem solid var(--light);
+  display: flex;
+  align-items: center;
+}
+.container_1 .card .face.face2 .Workcontent a {
+  margin: 1.5rem 0 0;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #333;
+  padding: 0.5rem;
+  border: 0.1rem solid #333;
+}
+
+.container_1 .card .face.face2 .Workcontent a:hover {
+  background: #333;
+  color: #fff;
+}
+.container_1Wrapper {
+  overflow-y: scroll;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 80em) {
+  .container_1 .card .face {
+    width: 27rem;
+    height: 20rem;
+  }
+  .container_1 .card .face.face1 .Workcontent img {
+    width: 27rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 72em) {
+  .container_1 .card .face {
+    width: 29rem;
+    height: 20rem;
+  }
+  .container_1 .card .face.face1 .Workcontent img {
+    width: 29rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 70em) {
+  .container_1 {
+    display: grid;
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    row-gap: 0px;
+    column-gap: 0px;
+    margin: 0;
+  }
+  .container_1 .card .face {
+    width: 30rem;
+    height: 20rem;
+  }
+  .container_1 .card .face.face1 .Workcontent img {
+    width: 30rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 60em) {
+  .container_1Wrapper {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    margin-left: 2.4rem;
+  }
+  .container_1 .card .face {
+    width: 30rem;
+    height: 20rem;
+  }
+  .container_1 .card .face.face1 .Workcontent img {
+    width: 30rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 50em) {
+  .container_1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .container_1 .card .face {
+    width: 30rem;
+    height: 20rem;
+  }
+  .container_1 .card .face.face1 .Workcontent img {
+    width: 30rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 30em) {
+  .container_1 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .container_1 .card .face {
+    width: 31rem;
+    height: 20rem;
+  }
+  .container_1 .card .face.face1 .Workcontent img {
+    width: 31rem;
+    height: 20rem;
+  }
+}

@@ -1,0 +1,67 @@
+@import "../AllCss/root.css";
+.NavFormat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  gap: 3rem;
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+}
+span {
+  font-size: 1.5rem;
+  align-self: center;
+  color: var(--dark);
+  font-weight: normal;
+  z-index: 2;
+}
+
+.item {
+  display: flex;
+  position: relative;
+  gap: 0.5rem;
+  transition: width 1s;
+  transition-delay: 0.7s;
+  z-index: 1;
+  padding-left: 0.7rem;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  height: 100%;
+  width: 0.3rem;
+  background-color: var(--transparent);
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.2s cubic-bezier(1, 0, 0, 1) 0.1s,
+    background-color 0.1s;
+}
+.item:hover {
+  cursor: pointer;
+}
+.item:hover::before {
+  z-index: -1;
+  transform: scaleY(1.5);
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.item:active::before {
+  z-index: -1;
+  background-color: var(--ternary);
+}
+a:visited {
+  color: var(--dark);
+}
+@media (max-width: 60em) {
+  .NavFormat {
+    display: none;
+  }
+  span {
+    font-size: 2.5rem;
+  }
+}
